@@ -2,7 +2,7 @@
   "name": "login",
   "version": "1.0.0",
   "description": "",
-  "main": "app.js",
+  "main": "app.js", // app.js is the entry here when npm init was done
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
