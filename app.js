@@ -31,7 +31,7 @@ app.use(bodyParser.urlencoded({extended: false}));
 app.use(cookieParser());
 
 // set STATIC FOLDER (this is the public folder), this is where we'll store files such as stylesheets, images, jQuery, things that are publicly accessible to the browser
-app.use(express.static(path.join(__dirname + 'public')));
+app.use(express.static(path.join(__dirname + '/public'))); // figured out why the css files were not being imported, it was because the 'public' had to have root designation '/' as in '/public'
 
 //EXPRESS SESSION
 app.use(session({

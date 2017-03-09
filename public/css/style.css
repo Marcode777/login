@@ -1,7 +1,6 @@
-.jumbotron {
- background-color:yellow;
+/* Space out content a bit */
+.jumbotron{
+  background-color:#3366ff;
+  text-align: center;
 }
 
-.body{
-  background-color: yellow;
-}
