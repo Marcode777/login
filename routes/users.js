@@ -9,6 +9,11 @@ router.get('/register', function (req, res){ // this is a get request route for 
 // LOGIN ROUTE
 router.get('/login', function (req, res){
   res.render('login');
-})
+});
+
+//LOGOUT ROUTE (i have added this)
+router.get('/logout', function (req, res){
+  res.render('logout');
+});
 
 module.exports = router;
