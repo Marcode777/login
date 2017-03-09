@@ -1,4 +1,7 @@
 .jumbotron {
-  text-align: center;
-  background-color: gold;
+ background-color:yellow;
+}
+
+.body{
+  background-color: yellow;
 }

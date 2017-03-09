@@ -75,8 +75,8 @@ app.use(function(req, res, next){
 });
 
 // MIDDLEWARE FOR OUR ROUTE FILES
-app.use('/', routes); // '/' is mapped to routes which in the var up near the top of the page, goes to './routes/index'
-app.use('/users', users); // this is mapped accordingly to users
+app.use('/', routes); // '/' is mapped to routes which in the var up near the top of the page, goes to './routes/index', this leads to the homepage
+app.use('/users', users); // this is mapped accordingly as well, just like the line of code above
 
 //SET PORT
 app.set('port', (process.env.PORT || 3000));
@@ -89,7 +89,7 @@ app.listen(app.get('port'), function(){
 
 
 
-//LEFT OFF AT 14:33
+//LEFT OFF AT 18:42
 
 
 
