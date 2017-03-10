@@ -34,7 +34,21 @@
 
       <div class="row">
         <div class="col-lg-12">
-        
+          <!-- the code below is for the msg from '/routes/users.js' file to be displayed, this is from bootstrap-->
+
+            {{#if success_msg}} <!-- here, we're checking for a global variable, success_msg, remember, we had set this global variable in app.js-->
+            <div class="alert alert-success">{{success_msg}}</div>
+            {{/if}}
+
+             {{#if error_msg}} <!-- here, we're checking for a global variable, error_msg, remember, we had set this global variable in app.js-->
+            <div class="alert alert-danger">{{error_msg}}</div>
+            {{/if}}
+
+             {{#if error}} <!-- here, we're checking for a global variable, error, remember, we had set this global variable in app.js-->
+            <div class="alert alert-danger">{{error}}</div>
+            {{/if}}
+
+          <!-- the code above is for the msg from '/routes/users.js' file to be displayed, this is from bootstrap-->
           {{{body}}} 
         </div>   
         <!--col-->
