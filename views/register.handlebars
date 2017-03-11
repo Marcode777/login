@@ -1,6 +1,13 @@
   <h3 style="background-color:green">REGISTER</h3>
 
 <h2 class="page-header">Register</h2>
+  <!--below is the code that displays errors on the re-rendered page, if there are any-->
+  {{#if errors}} <!--so if there are errors, then we're going to loop through them using #each-->
+    {{#each errors}}
+      <div class="alert alert-danger">{{msg}}</div> <!--this code is from bootstrap,if there are errors, then they error messages from Validation section of users.js will be displayed-->
+    {{/each}}
+  {{/if}}
+  <!-- above is the code that displays erros on the re-rendered page, if there are any-->
 <form method="post" action="/users/register">
   <div class="form-group">
     <label>Name</label>
