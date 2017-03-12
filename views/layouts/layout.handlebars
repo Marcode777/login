@@ -21,10 +21,15 @@
       <div class="header clearfix">
         <nav>
           <ul class="nav nav-pills pull-right">
+            {{#if user}} <!-- this code is for having the logout link option show if a user is logged in. We had to do it this way bc '!' is not allowed in handlebars-->
+            <!-- also a quick note on making comments in handlebars, sometimes it will pick up certain syntax in the comments and cause it to affect the code-->
             <li role="presentation"><a href="/">Dashboard</a></li> <!-- '/' route leads to homepage or dashboard-->
+            <li role="presentation"><a href="/users/logout">Logout</a></li>
+            {{else}} <!-- had to use else bc '!' is not allowed in handlebars-->
+            <!-- this code is for having the login and register link options show if a user is not logged in-->
             <li role="presentation"><a href="/users/login">Login</a></li> <!-- route leads to '/users/login' page-->
             <li role="presentation"><a href="/users/register">Register</a></li> <!-- route leads to '/users/register'-->
-            <li role="presentation"><a href="/users/logout">Logout</a></li>
+            {{/if}}
           </ul>
         </nav>
         <h3 class="text-muted">LOGIN</h3>
