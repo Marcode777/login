@@ -71,8 +71,12 @@ app.use(function(req, res, next){
   res.locals.success_msg = req.flash('success_msg'); // this is for the success message
   res.locals.error_msg = req.flash('error_msg'); // this is for any error messages we may have
   res.locals.error = req.flash('error'); // the reason we have this line of code is because passport sets its own flash messages and it sets it to error, so that's why we have this line of code in addition to the line of code above
+  res.locals.user = req.user || null; //We want to change the menu around, so that if we're loggedin, the login link and register link does not continually show, and if we're logged out, the logout link does not continually show // so we're creating another global variable called user, and if the user's there and we're going to be able to access the user from anywhere, if not, then it will just be null. Then we'll go to our layout.handlebars file and right above login and register
   next();
 });
+
+
+
 
 // MIDDLEWARE FOR OUR ROUTE FILES
 app.use('/', routes); // '/' is mapped to routes which in the var up near the top of the page, goes to './routes/index', this leads to the homepage
