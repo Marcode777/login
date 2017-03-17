@@ -5,6 +5,11 @@
   <!-- Latest compiled and minified CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"> <!-- this cdn must not be used if we want to use the downloaded bootstrap files-->
   <!-- <link rel="stylesheet" href="../../public/css/style.css"/> --> <!--proper route must be used--> <!-- figured it out, from stackoverflow: you cannot import files with handlebars, only partials-->
+  <!-- this is for the jQuery CDN-->
+  <script
+  src="https://code.jquery.com/jquery-3.1.1.min.js"
+  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+  crossorigin="anonymous"></script>
 
   <link rel="stylesheet" type="text/css" href="css/bootstrap.css"/>
   <link rel="stylesheet" type="text/css" href="css/style.css"/> <!-- figured out why the css files were not being imported, it was because in app.js file, the 'public' had to have root designation '/' as in '/public' -->
@@ -67,4 +72,13 @@
     </div><!-- container-->
 
 </body> <!-- quick note: most files will be implemented with a simple refresh of the page, no server re-start required, however with js files, or route files, a server-restart will be needed for changes to be implemented-->
+
+<!-- this area is for the actual jQuery code-->
+  <script type="text/javascript">
+    $(document).ready(function(){
+      $(".text-muted").css("color", "black")
+    });
+  </script>
+<!-- area above is for the actual jQuery code-->
+
 </html>
